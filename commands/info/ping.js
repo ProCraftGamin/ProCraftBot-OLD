@@ -3,7 +3,7 @@ module.exports = {
     catagory: "info",
     permissions: [],
     devOnly: false,
-    run: async ({bot, message, args}) => {
-        message.reply("The bot is working correctly!")
+    run: async ({client, message, args}) => {
+        message.reply("The bot is working!")
     }
 }
