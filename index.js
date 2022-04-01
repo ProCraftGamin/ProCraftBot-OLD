@@ -1,4 +1,5 @@
 const Discord = require("discord.js")
+const { Client, intents } = require("discord.js")
 require("dotenv").config()
 
 const generateImage = require("./generateImage")
@@ -7,7 +8,7 @@ const client = new Discord.Client({
     intents: [
         "GUILDS",
         "GUILD_MESSAGES",
-        "GUILD_MEMBERS"
+        "GUILD_MEMBERS",
     ]
 })
 
@@ -16,11 +17,6 @@ let bot = {
     prefix: "!",
     owners: ["775420795861205013"]
 }
-
-
-
-
-
 
 
 client.slashcommands = new Discord.Collection()
@@ -52,5 +48,7 @@ client.on("guildMemberAdd", async (member) => {
 
 
 module.exports = bot
+
+
 
 client.login(process.env.TOKEN)
