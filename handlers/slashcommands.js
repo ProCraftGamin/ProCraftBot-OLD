@@ -1,5 +1,4 @@
 
-  
 const fs = require("fs")
 
 const getFiles = (path, ending) => {
@@ -19,5 +18,4 @@ module.exports = (bot, reload) => {
         const slashcmd = require(`../slashcommands/${f}`)
         client.slashcommands.set(slashcmd.name, slashcmd)
     })
-    console.log(`Loaded ${client.slashcommands.size} slash commands`)
 }

@@ -1,6 +1,11 @@
 const Discord = require("discord.js")
 const { Client, intents } = require("discord.js")
 require("dotenv").config()
+const { REST } = require("@discordjs/rest")
+const fs = require("fs")
+const { Player } = require("discord-player")
+
+
 
 const generateImage = require("./generateImage")
 
